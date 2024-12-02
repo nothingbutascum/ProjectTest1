@@ -1,0 +1,44 @@
+﻿@page "/login"
+
+<div class="header">
+    <h1>H</h1>
+</div>
+
+<div class="container">
+    <div class="form-container">
+        <h3>Login</h3>
+        <form>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" @bind="Email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" @bind="Password" placeholder="Enter your password">
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn-login" @onclick="HandleLogin">Login</button>
+                <button type="button" class="btn-register" @onclick="HandleRegister">Register</button>
+            </div>
+        </form>
+    </div>
+    <div class="image-container">
+        <img src="image.png" alt="Teaching Illustration">
+    </div>
+</div>
+
+@code {
+    private string Email { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;
+
+    private void HandleLogin()
+    {
+        // Replace this with your actual login logic
+        Console.WriteLine($"Login attempted with Email: {Email}");
+    }
+
+    private void HandleRegister()
+    {
+        Console.WriteLine("Register button clicked!");
+    }
+}
